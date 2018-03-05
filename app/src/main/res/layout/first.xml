@@ -15,7 +15,7 @@
             android:id="@+id/t1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Physical Profile"
+            android:text="Details"
             android:textSize="40sp"
             android:textColor="#000000"/>
 
@@ -116,7 +116,8 @@
                 android:textSize="20sp" />
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent"
+                android:id="@+id/rg1">
 
                 <RadioButton
                     android:id="@+id/r4"
@@ -146,7 +147,8 @@
                 android:textSize="20sp" />
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent"
+                android:id="@+id/rg2">
 
                 <RadioButton
                     android:id="@+id/r1"
@@ -167,14 +169,7 @@
             </RadioGroup>
         </LinearLayout>
 
-        <Button
-            android:id="@+id/bf"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@null"
-            android:text="If already filled, Click here>>"
-            />
+
 
         <Button
             android:id="@+id/b4"

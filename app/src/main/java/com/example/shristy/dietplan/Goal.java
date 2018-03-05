@@ -24,7 +24,7 @@ public class Goal extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i1 = new Intent(Goal.this, Goal.class);
+                Intent i1 = new Intent(Goal.this, LoseFat.class);
                 startActivity(i1);
 
             }
@@ -35,7 +35,7 @@ public class Goal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i1 = new Intent(Goal.this, Goal.class);
+                Intent i1 = new Intent(Goal.this, MaintainWeight.class);
                 startActivity(i1);
 
             }
@@ -44,7 +44,7 @@ public class Goal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i1 = new Intent(Goal.this, First.class);
+                Intent i1 = new Intent(Goal.this, BuildMuscles.class);
                 startActivity(i1);
 
             }
