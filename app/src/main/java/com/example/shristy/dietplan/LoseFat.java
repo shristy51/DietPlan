@@ -1,8 +1,12 @@
 package com.example.shristy.dietplan;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -11,6 +15,7 @@ import com.firebase.client.FirebaseError;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Map;
 
@@ -19,18 +24,39 @@ import java.util.Map;
  */
 
 public class LoseFat extends AppCompatActivity {
-    private TextView e1,e2;
+    private TextView e1,e2,t11,t9;
+    private Button btnBack,bcl;
     private FirebaseAuth auth;
     private Firebase mRef;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mRef=new Firebase("https://dietplan-4b03f.firebaseio.com/Users/Uid");
+        auth = FirebaseAuth.getInstance();
+        FirebaseUser currentFirebaseUser = auth.getCurrentUser() ;
+        final String Uid=currentFirebaseUser.getUid();
+
+        mRef=new Firebase("https://dietplan-4b03f.firebaseio.com/Users"+ Uid);
         setContentView(R.layout.losefat);
         e1 = (TextView) findViewById(R.id.e1);
+        t11 = (TextView) findViewById(R.id.t11);
+        t9= (TextView) findViewById(R.id.t9);
+        btnBack = (Button) findViewById(R.id.btn_back);
+        bcl = (Button) findViewById(R.id.bcl);
         e2 = (TextView) findViewById(R.id.e2);
-
+       bcl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainIntent= new Intent(LoseFat.this,Info1.class);
+                startActivity(mainIntent);
+            }
+        });
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         mRef.addValueEventListener(new com.firebase.client.ValueEventListener() {
             @Override
             public void onDataChange(com.firebase.client.DataSnapshot dataSnapshot) {
@@ -45,6 +71,17 @@ public class LoseFat extends AppCompatActivity {
                 int a = Integer.parseInt(Age);
                 double s= (h*h)/10000;
                 double bmi=w/s;
+                if(bmi<20)
+                {
+                    t11.setText("So,You are UnderWeight!!");
+                }
+                else if(bmi<25 && bmi>20)
+                {t11.setText("So,You are Healthy!!");}
+                else if(bmi<30 && bmi>25)
+                {t11.setText("So,You are Overweight!!");}
+                else{t11.setText("So,You are Obese!!");}
+
+                t9.setText("You want to lose fat");
                 double bmr,cal1,intake;
                 String bmi1=String.valueOf(bmi);
                 e1.setText(bmi1);

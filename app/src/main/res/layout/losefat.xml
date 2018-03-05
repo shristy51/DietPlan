@@ -7,6 +7,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Your Personalized Diet plan"
+        android:textStyle="bold"
         android:textSize="25sp"
         android:textColor="#000000"/>
     <LinearLayout
@@ -37,6 +38,7 @@
                 android:layout_height="wrap_content"
                 android:text="YOUR BMI-"
                 android:fontFamily="monospace"
+                android:textStyle="bold"
                 android:textColor="#000000"
                 android:textSize="20sp"
                 />
@@ -46,7 +48,10 @@
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:text="" />
+                android:text=""
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                android:textSize="20sp" />
 
 
         </LinearLayout>
@@ -63,12 +68,47 @@
                 android:layout_height="wrap_content"
                 android:text="A BMI of between 18.5 and 25 is ideal. "
                 android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
                 android:textColor="#000000"/>
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="366dp"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+            <TextView
+                android:id="@+id/t11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                android:textColor="#000000"/>
 
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="366dp"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+            <TextView
+                android:id="@+id/t9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                android:textColor="#000000"/>
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="366dp"
@@ -87,6 +127,8 @@
                 android:layout_height="wrap_content"
                 android:text="Your Daily intake of nutritions are given below:"
                 android:textColor="#000000"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
                 android:textSize="20sp" />
 
 
@@ -101,15 +143,43 @@
                 android:id="@+id/t7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Calorie Intake per day:"
+                android:text="Calorie Intake per day as per your selected plan:"
                 android:textColor="#000000"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
                 android:textSize="20sp" />
-            <TextView
-                android:id="@+id/e2"
-                android:layout_width="60sp"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:text="" />
+
             </LinearLayout>
+        <TextView
+            android:id="@+id/e2"
+            android:layout_width="373dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:fontFamily="monospace"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="" />
+        <Button
+            android:id="@+id/bcl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="monospace"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:background="@null"
+            android:text="Click here to check amount of calories in common food items>>"
+            />
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="monospace"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:background="@null"
+            android:text="@string/btn_back"
+            />
         </LinearLayout>
 </RelativeLayout>

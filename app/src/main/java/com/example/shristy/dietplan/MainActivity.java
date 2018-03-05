@@ -85,7 +85,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         if (task.isSuccessful()) {
                             //display some message here
                             Toast.makeText(MainActivity.this, "Successfully registered", Toast.LENGTH_LONG).show();
-
+                            Intent i = new Intent(MainActivity.this, MainActivity.class);
+                            startActivity(i);
 
                         } else {
                             //display some message here

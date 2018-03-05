@@ -4,9 +4,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic2"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic2"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:name=".DietPlan"
@@ -72,6 +72,27 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Goal" />
+        </activity>
+        <activity android:name=".Info1"
+            android:parentActivityName=".LoseFat"
+            android:exported="true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LoseFat" />
+        </activity>
+        <activity android:name=".Info2"
+            android:parentActivityName=".MaintainWeight"
+            android:exported="true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MaintainWeight" />
+        </activity>
+        <activity android:name=".Info3"
+            android:parentActivityName=".BuildMuscles"
+            android:exported="true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".BuildMuscles" />
         </activity>
     </application>
 
