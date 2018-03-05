@@ -101,7 +101,7 @@ public class BuildMuscles extends AppCompatActivity {
                 else {
                     cal1=1.9*bmr;
                 }
-                intake=cal1-500;
+                intake=cal1+500;
                 String intake1=String.valueOf(intake);
                 e2.setText(intake1);
             }
