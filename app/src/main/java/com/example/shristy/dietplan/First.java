@@ -11,9 +11,14 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+import com.firebase.client.ValueEventListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+import java.util.Map;
 
 public class First extends AppCompatActivity {
 
@@ -21,7 +26,7 @@ public class First extends AppCompatActivity {
     private FirebaseAuth auth;
     private RadioGroup r,r9;
     private RadioButton r1,r2,r3,r4,r5;
-    private Button btnBack,b4;
+    private Button btnBack,b4,b5;
     private Firebase mRootRef,Ui;
 
 
@@ -42,6 +47,7 @@ public class First extends AppCompatActivity {
         e2 = (EditText) findViewById(R.id.e2);
         e3 = (EditText) findViewById(R.id.e3);
         b4 = (Button) findViewById(R.id.b4);
+        b5 = (Button) findViewById(R.id.b5);
         btnBack = (Button) findViewById(R.id.btn_back);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +56,29 @@ public class First extends AppCompatActivity {
             }
         });
 
+        b5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mRootRef.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        Map<String, String> map =dataSnapshot.getValue(Map.class);
+                        String Height=map.get("Height");
+                        String Weight=map.get("Weight");
+                        String Age=map.get("Age");
+                        String Gender=map.get("Gender");
+                        String Activity=map.get("Activity Level");
+                        Intent i = new Intent(First.this, Goal.class);
+                        startActivity(i);
+                    }
+
+                    @Override
+                    public void onCancelled(FirebaseError firebaseError) {
+
+                    }
+                });
+            }
+        });
         b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

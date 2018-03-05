@@ -44,13 +44,12 @@ public class LoseFat extends AppCompatActivity {
         btnBack = (Button) findViewById(R.id.btn_back);
         bcl = (Button) findViewById(R.id.bcl);
         e2 = (TextView) findViewById(R.id.e2);
-       bcl.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent mainIntent= new Intent(LoseFat.this,Info1.class);
-                startActivity(mainIntent);
-            }
-        });
+bcl.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        startActivity(new Intent(LoseFat.this, Info1.class));
+    }
+});
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

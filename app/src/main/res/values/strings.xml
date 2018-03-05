@@ -40,33 +40,32 @@
     <string name="forgot_password_msg">We just need your registered Email Id to sent you password reset instructions.</string>
 
 <string name="data">Food: Calories
-    1. Apple, medium: 72
+    Apple: 72,
 
-2. Bagel: 289
+Bagel: 289,
 
-3. Banana, medium: 105
+Banana, medium: 105,
 
-4. Beer (regular, 12 ounces): 153
+Beer (regular, 12 ounces): 153,
 
-5. Bread (one slice, wheat or white): 66
+Bread (one slice, wheat or white): 66,
 
-6. Butter (salted, 1 tablespoon): 102
+Butter (salted, 1 tablespoon): 102,
 
-7. Carrots (raw, 1 cup): 52
+ Carrots (raw, 1 cup): 52,
+     Cheddar cheese (1 slice): 113,
 
-8. Cheddar cheese (1 slice): 113
+ Chicken breast (boneless, skinless, roasted, 3 ounces): 142,
 
-9. Chicken breast (boneless, skinless, roasted, 3 ounces): 142
+ Chili with beans (canned, 1 cup): 287,
 
-10. Chili with beans (canned, 1 cup): 287
+ Chocolate chip cookie (from packaged dough): 59,
 
-11. Chocolate chip cookie (from packaged dough): 59
+ Coffee (regular, brewed from grounds, black): 2,
 
-12. Coffee (regular, brewed from grounds, black): 2
+ Cola (12 ounces): 136,
 
-13. Cola (12 ounces): 136
-
-14. Corn (canned, sweet yellow whole kernel, drained, 1 cup): 18
+Corn (canned, sweet yellow whole kernel, drained, 1 cup): 18,
 
 15. Egg (large, scrambled): 102
 

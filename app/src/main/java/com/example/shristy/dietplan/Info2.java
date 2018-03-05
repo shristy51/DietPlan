@@ -1,32 +1,26 @@
 package com.example.shristy.dietplan;
-
-
-import android.app.Application;
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
-public class Info2 extends AppCompatActivity{
-    TextView t7;
-    Button btnBack;
+public class Info2 extends Activity {
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        t7 = (TextView) findViewById(R.id.t7);
-        setContentView(R.layout.info);
+        setContentView(R.layout.info2);
 
-
-        btnBack = (Button) findViewById(R.id.btn_back);
-        btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+//Get a reference to your WebView//
+        WebView webView = (WebView) findViewById(R.id.webview);
+        webView.getSettings().setSupportZoom(true);
+        webView.getSettings().setBuiltInZoomControls(true);
+        webView.getSettings().setDisplayZoomControls(true);
+        webView.getSettings().setJavaScriptEnabled(true);
+        WebSettings settings = webView.getSettings();
+        settings.setLoadWithOverviewMode(true);
+        settings.setUseWideViewPort(true);
+//Specify the URL you want to display//
+        webView.loadUrl("https://drive.google.com/file/d/19j0ixtRYdFZbIE-abU5zB0DDw_zZ0qL5/view?usp=sharing");
     }
-
-
 }

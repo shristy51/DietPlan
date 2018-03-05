@@ -46,9 +46,8 @@ public class BuildMuscles extends AppCompatActivity {
         e2 = (TextView) findViewById(R.id.e2);
         bcl.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent mainIntent= new Intent(BuildMuscles.this,Info3.class);
-                startActivity(mainIntent);
+            public void onClick(View view) {
+                startActivity(new Intent(BuildMuscles.this, Info3.class));
             }
         });
         btnBack.setOnClickListener(new View.OnClickListener() {

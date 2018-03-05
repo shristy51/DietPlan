@@ -168,7 +168,7 @@
             android:textStyle="bold"
             android:textSize="20sp"
             android:background="@null"
-            android:text="Click here to check amount of calories in common food items>>"
+            android:text="Click here to see calorie chart>>"
             />
         <Button
             android:id="@+id/btn_back"

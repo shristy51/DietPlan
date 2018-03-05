@@ -13,7 +13,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Goal extends AppCompatActivity {
-    Button b1,b2,b3;
+    Button b1,b2,b3,btnBack;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.goal );
@@ -21,6 +21,13 @@ public class Goal extends AppCompatActivity {
         b1= (Button) findViewById ( R.id.b1 );
         b2 = (Button) findViewById ( R.id.b2);
         b3= (Button) findViewById ( R.id.b3);
+        btnBack = (Button) findViewById(R.id.btn_back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
